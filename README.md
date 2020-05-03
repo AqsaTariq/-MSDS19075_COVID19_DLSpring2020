@@ -43,7 +43,8 @@ nn.Linear(850, len(class_names),bias = True)<br>
 Got training accuracy with gamma value 1 of focal loss.<br>
 Train: Loss: 0.000000	Accuracy: 63.542% <br>
 
-
+#### Model Weights:
+https://drive.google.com/drive/u/1/folders/1j-I2lfw6sDZoRm87v38p1nXwlojvXU9w
 
 # Tools Used:
 Python
