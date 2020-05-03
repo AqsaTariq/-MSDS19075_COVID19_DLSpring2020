@@ -26,10 +26,11 @@ Validation Accuracy : 63 % at ecpoch 4<br>
 
 ##### resnet18_entire_withFocalLoss_Train_confusion_Matrix<br>
 F1 score: 0.5071240175708435<br>
- 
+  ![6](https://user-images.githubusercontent.com/64742393/80921748-0b3fd980-8d2d-11ea-94bc-0a801a3aebef.png)<br><br>
 ##### resnet18_entire_withFocalLoss_Valid_confusion_Matrix<br>
 F1 score: 0.49567523358695387<br>
- 
+
+![7](https://user-images.githubusercontent.com/64742393/80921753-0ed36080-8d2d-11ea-9a99-0a24c37d49e5.png)<br>
 <br><br><br>
 
 # Tools Used:
