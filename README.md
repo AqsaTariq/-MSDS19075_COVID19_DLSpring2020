@@ -5,7 +5,7 @@ https://drive.google.com/open?id=1eytbwaLQBv12psV8I-aMkIli9N3bf8nO&authuser=1
 # Multilabel Classification Covid-19
 <b> Description about Models  </b> <br>
 Two Models were used: VGG16 and ResNet18 with modiftication in Fully connected layers.<br>
-With learning rate 0.001, batch size 32 , Epochs 5 and gamma 2 of Focal Loss I got the following accuracy. And with the following changes in FC layers of pretrained Resnet18.<br>
+### With learning rate 0.001, batch size 32 , Epochs 5 and gamma 2 of Focal Loss I got the following accuracy. And with the following changes in FC layers of pretrained Resnet18.<br>
 Sequential(
   (0): Linear(in_features=512, out_features=500, bias=True) <br>
   (1): ReLU(inplace=True) <br>
@@ -19,7 +19,7 @@ Training Accuracy : 63 % at ecpoch <br>
 Validation Loss is :  0.0 at epoch 4<br>
 Validation Accuracy : 63 % at ecpoch 4<br>
 
-### Accuracy and Loss Curves:<br>
+##### Accuracy and Loss Curves:<br>
 
   ![4](https://user-images.githubusercontent.com/64742393/80921621-2100cf00-8d2c-11ea-9d3d-fae758758294.png)
 ![5](https://user-images.githubusercontent.com/64742393/80921622-252cec80-8d2c-11ea-8f56-32f1e7792fa7.png)<br>
@@ -31,7 +31,19 @@ F1 score: 0.5071240175708435<br>
 F1 score: 0.49567523358695387<br>
 
 ![7](https://user-images.githubusercontent.com/64742393/80921753-0ed36080-8d2d-11ea-9a99-0a24c37d49e5.png)<br>
-<br><br><br>
+<br><br>
+
+#### With learning rate 0.001, batch size 32 , Epochs 5 with replacing the last Fc layer with 2 Fc layers and changing the in-feauters and out-features of FC layer0 and 3 of prtrained VGG16 Model <br>
+vgg16.classifier[0].out_features = 850        # 75*10+100<br>
+vgg16.classifier[3].in_features = 850<br>
+vgg16.classifier[3].out_features = 2<br>
+nn.Linear(4096, 850,bias = True)])<br>
+nn.ReLU(inplace = True)])<br>
+nn.Linear(850, len(class_names),bias = True)<br>
+Got training accuracy with gamma value 1 of focal loss.<br>
+Train: Loss: 0.000000	Accuracy: 63.542% <br>
+
+
 
 # Tools Used:
 Python
