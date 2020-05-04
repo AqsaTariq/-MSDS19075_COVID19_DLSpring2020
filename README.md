@@ -20,15 +20,19 @@ Training Accuracy: 64.786%: <br>
 Training Accuracy: 59.741%
 <br>Train Confusion Matrix <br>
 
+![renet_with_Focal_Loss_Train](https://user-images.githubusercontent.com/64742393/80946123-31ec2780-8da2-11ea-872e-bce0d507a68f.png)
 <br>Validation Confusion Matrix <br>
 
+![resnet_with_focal_loss_Valid](https://user-images.githubusercontent.com/64742393/80946126-344e8180-8da2-11ea-8751-0586a005ae01.png)
 <br>
+
+
 #### Model Weights:
 https://drive.google.com/drive/u/1/folders/1j-I2lfw6sDZoRm87v38p1nXwlojvXU9w
 
 # Tools Used:
-Python
-Pytorch
+Python <br>
+Pytorch<br.
 
-Note:
+<b>Note:</b>
 “This repository contains code and results for COVID-19 classification assignment by Deep Learning Spring 2020 course offered at Information Technology University, Lahore, Pakistan. This assignment is only for learning purposes and is not intended to be used for clinical purposes.”
