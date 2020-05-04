@@ -5,43 +5,22 @@ https://drive.google.com/open?id=1eytbwaLQBv12psV8I-aMkIli9N3bf8nO&authuser=1
 # Multilabel Classification Covid-19
 <b> Description about Models  </b> <br>
 Two Models were used: VGG16 and ResNet18 with modiftication in Fully connected layers.<br>
-### With learning rate 0.001, batch size 32 , Epochs 5 and gamma 2 of Focal Loss I got the following accuracy. And with the following changes in FC layers of pretrained Resnet18.<br>
-Sequential(
-  (0): Linear(in_features=512, out_features=500, bias=True) <br>
-  (1): ReLU(inplace=True) <br>
-  (2): Dropout(p=0.1, inplace=False) <br>
-  (3): Linear(in_features=500, out_features=350, bias=True) <br>
-)
-<br><br>
-Training Loss is : 3.3721902223740607e-13 at epoch 4<br>
-Training Accuracy : 63 % at ecpoch <br>
-<br><br>
-Validation Loss is :  0.0 at epoch 4<br>
-Validation Accuracy : 63 % at ecpoch 4<br>
-
-##### Accuracy and Loss Curves:<br>
-
-  ![4](https://user-images.githubusercontent.com/64742393/80921621-2100cf00-8d2c-11ea-9d3d-fae758758294.png)
-![5](https://user-images.githubusercontent.com/64742393/80921622-252cec80-8d2c-11ea-8f56-32f1e7792fa7.png)<br>
-
-##### resnet18_entire_withFocalLoss_Train_confusion_Matrix<br>
-F1 score: 0.5071240175708435<br>
+#### <b> Resnet18 with Focal_Loss </b>
+##### Accuracy<br>
+Training Accuracy : 68 % at ecpoch 9 <br>
+####### resnet18_entire_withFocalLoss_Train_confusion_Matrix<br>
+F1 score: 0.7329962676900846<br>
   ![6](https://user-images.githubusercontent.com/64742393/80921748-0b3fd980-8d2d-11ea-94bc-0a801a3aebef.png)<br><br>
-##### resnet18_entire_withFocalLoss_Valid_confusion_Matrix<br>
-F1 score: 0.49567523358695387<br>
+####### resnet18_entire_withFocalLoss_Valid_confusion_Matrix<br>
+F1 score: 0.7737092499619319<br>
 
 ![7](https://user-images.githubusercontent.com/64742393/80921753-0ed36080-8d2d-11ea-9a99-0a24c37d49e5.png)<br>
 <br><br>
 
-#### With learning rate 0.001, batch size 32 , Epochs 5 with replacing the last Fc layer with 2 Fc layers and changing the in-feauters and out-features of FC layer0 and 3 of prtrained VGG16 Model <br>
-vgg16.classifier[0].out_features = 850        # 75*10+100<br>
-vgg16.classifier[3].in_features = 850<br>
-vgg16.classifier[3].out_features = 2<br>
-nn.Linear(4096, 850,bias = True)])<br>
-nn.ReLU(inplace = True)])<br>
-nn.Linear(850, len(class_names),bias = True)<br>
-Got training accuracy with gamma value 1 of focal loss.<br>
-Train: Loss: 0.000000	Accuracy: 63.542% <br>
+#### <b> VGG18 with Focal_Loss </b><br>
+Training Accuracy: 64.786%: <br>
+
+#### <b> Resnet18 with BCEWithLogits_Loss </b><br>
 
 #### Model Weights:
 https://drive.google.com/drive/u/1/folders/1j-I2lfw6sDZoRm87v38p1nXwlojvXU9w
