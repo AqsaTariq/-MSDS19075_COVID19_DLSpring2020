@@ -32,7 +32,7 @@ https://drive.google.com/drive/u/1/folders/1j-I2lfw6sDZoRm87v38p1nXwlojvXU9w
 
 # Tools Used:
 Python <br>
-Pytorch<br.
+Pytorch<br>
 
 <b>Note:</b>
 “This repository contains code and results for COVID-19 classification assignment by Deep Learning Spring 2020 course offered at Information Technology University, Lahore, Pakistan. This assignment is only for learning purposes and is not intended to be used for clinical purposes.”
